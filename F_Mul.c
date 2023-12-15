@@ -10,7 +10,7 @@ void F_Mul(stack_t **stack_head, unsigned int cnt)
 	stack_t *hd;
 	int leng = 0, aux;
 
-	hd = *head;
+	hd = *stack_head;
 	while (hd)
 	{
 		hd = hd->next;
@@ -21,11 +21,11 @@ void F_Mul(stack_t **stack_head, unsigned int cnt)
 		fprintf(stderr, "L%d: can't mul, stack too short\n", cnt);
 		fclose(bus.file);
 		free(bus.content);
-		Free_stack(*stack_head);
+		Free_Stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
 	hd = *stack_head;
-	aux = hd->next->n * hd->;
+	aux = hd->next->n * hd->n;
 	hd->next->n = aux;
 	*stack_head = hd->next;
 	free(hd);

@@ -9,7 +9,8 @@ void Add_node(stack_t **stack_head, int new_val)
 {
 	stack_t *n_node, *aux;
 
-	aux = malloc(sizeof(stack_t));
+	aux = *stack_head;
+	n_node = malloc(sizeof(stack_t));
 	if (n_node == NULL)
 	{
 		printf("Error\n");
@@ -17,7 +18,7 @@ void Add_node(stack_t **stack_head, int new_val)
 	}
 	if (aux)
 		aux->prev = n_node;
-	n_node->n = n;
+	n_node->n = new_val;
 	n_node->next = *stack_head;
 	n_node->prev = NULL;
 	*stack_head = n_node;

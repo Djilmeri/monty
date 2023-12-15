@@ -11,7 +11,7 @@ int Execute_Stack(char *content, stack_t **stack_head,
 		unsigned int cnt, FILE *file)
 {
 	instruction_t opst[] = {
-				{"push", FPpushnode}, {"pall", F_Pall}, {"pint", F_Pint},
+				{"push", F_Pushnode}, {"pall", F_Pall}, {"pint", F_Pint},
 				{"pop", F_Pop},
 				{"swap", F_Swap_Elem},
 				{"add", F_Add},
@@ -24,7 +24,7 @@ int Execute_Stack(char *content, stack_t **stack_head,
 				{"pstr", F_Printstr},
 				{"rotl", F_Rotat},
 				{"rotr", F_Rotat_r},
-				{"queue", F_Que_QueAdd},
+				{"queue", F_Que},
 				{"stack", F_TopStack},
 				{NULL, NULL}
 				};

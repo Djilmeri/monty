@@ -13,7 +13,7 @@ void F_PcharT(stack_t **stack_head, unsigned int cnt)
 	hd = *stack_head;
 	if (!hd)
 	{
-		frintf(stderr, "L%d: can't pchar, stack empty\n", cnt);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", cnt);
 		fclose(bus.file);
 		free(bus.content);
 		Free_Stack(*stack_head);

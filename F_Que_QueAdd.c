@@ -15,19 +15,19 @@ void F_Que(stack_t **stack_head, unsigned int cnt)
  * Queue_Add - Add node to the tail stack
  * @new_val: new value
  * @stack_head: head of the stack
- * Return: no stack
+ * Return: no return
  */
-void Queue_Add(stack_t **stack_head, unsigned int new_val)
+void Queue_Add(stack_t **stack_head, int new_val)
 {
 	stack_t *n_node, *aux;
 
 	aux = *stack_head;
 	n_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	if (n_node == NULL)
 	{
 		printf("Error\n");
 	}
-	n_node->n = n;
+	n_node->n = new_val;
 	n_node->next = NULL;
 	if (aux)
 	{

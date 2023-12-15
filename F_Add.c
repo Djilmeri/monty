@@ -26,6 +26,7 @@ void F_Add(stack_t **stack_head, unsigned int cnt)
 	}
 	hd = *stack_head;
 	aux = hd->n + hd->next->n;
-	hd->next->n = hd->hd next;
+	hd->next->n = aux;
+	*stack_head = hd->next;
 	free(hd);
 }

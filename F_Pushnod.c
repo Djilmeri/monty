@@ -5,13 +5,13 @@
  * @cnt: line number
  * Return: no return
  */
-void F_pushnode(stack **stack_head, unsigned int cnt)
+void F_pushnode(stack_t **stack_head, unsigned int cnt)
 {
 	int n, j = 0, flag = 0;
 
 	if (bus.arg)
 	{
-		if (bus.[0] == '-')
+		if (bus.arg[0] == '-')
 			j++;
 		for (; bus.arg[j] != '\0'; j++)
 		{

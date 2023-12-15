@@ -28,7 +28,7 @@ void F_Div(stack_t **stack_head, unsigned int cnt)
 	if (hd->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", cnt);
-		fclose(bus.life);
+		fclose(bus.file);
 		free(bus.content);
 		Free_Stack(*stack_head);
 		exit(EXIT_FAILURE);

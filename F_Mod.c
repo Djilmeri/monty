@@ -33,7 +33,7 @@ hd = *stack_head;
 		Free_Stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
-	aux = hd->next->n % hd->;
+	aux = hd->next->n % hd->n;
 	hd->next->n = aux;
 	*stack_head = hd->next;
 	free(hd);
